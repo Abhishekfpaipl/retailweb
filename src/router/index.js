@@ -1,21 +1,51 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomePage from "../views/HomePage.vue";
+import CategoryPage from "../components/Category/CategoryPage.vue";
+import ProductPage from "../components/Product/ProductPage.vue";
+import CatelogPage from "../components/Catelog/CatelogPage.vue";
+import SearchPage from "../views/SearchPage.vue";
+import TestT from "../components/Category/Test/TestT.vue";
+import SupplierForm from '../views/SupplierForm.vue';
+
 
 const routes = [
   {
-    path: "/",
-    name: "home",
-    component: HomeView,
+    path: "/TestT",
+    name: "TestT",
+    component: TestT,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/",
+    name: "HomePage",
+    component: HomePage,
   },
+  {
+    path: "/CategoryPage",
+    name: "CategoryPage",
+    component: CategoryPage,
+  },
+  {
+    path: "/ProductPage/:productId",
+    name: "ProductPage",
+    component: ProductPage,
+  },
+  {
+    path: "/CatelogPage",
+    name: "CatelogPage",
+    component: CatelogPage,
+  },
+  {
+    path: "/SearchPage",
+    name: "SearchPage",
+    component: SearchPage,
+  },
+  {
+    path: "/SupplierForm",
+    name: "SupplierForm",
+    component: SupplierForm,
+  },
+  
+ 
 ];
 
 const router = createRouter({
