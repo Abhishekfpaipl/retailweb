@@ -773,6 +773,29 @@ export default createStore({
         ]
       },
     ],
+    orders: [
+      {
+        id: 1,
+        ttlamount: "2001",
+        avgrate: "562",
+        ttlpieces: "15",
+        imgdp: "img/icons/test1.png",
+      },
+      {
+        id: 2,
+        ttlamount: "2001",
+        avgrate: "562",
+        ttlpieces: "15",
+        imgdp: "img/icons/pd1.png",
+      },
+      {
+        id: 3,
+        ttlamount: "2001",
+        avgrate: "562",
+        ttlpieces: "15",
+        imgdp: "img/icons/pd2.png",
+      },
+    ],
   },
   getters: {
     getCollections(state){
@@ -791,7 +814,10 @@ export default createStore({
     result(state) {
       return state.num1 - state.num2;
     },
-  },
+    getOrders(state) {
+      return state.orders;
+    }
+},
   mutations: {
     setNum1(state, value) {
       state.num1 = value;

@@ -6,6 +6,7 @@ import CatelogPage from "../components/Catelog/CatelogPage.vue";
 import SearchPage from "../views/SearchPage.vue";
 import TestT from "../components/Category/Test/TestT.vue";
 import SupplierForm from '../views/SupplierForm.vue';
+import OrderPage from "@/views/Orders/OrderPage.vue";
 
 
 const routes = [
@@ -43,6 +44,11 @@ const routes = [
     path: "/SupplierForm",
     name: "SupplierForm",
     component: SupplierForm,
+  },
+  {
+    path: "/OrderPage",
+    name: "OrderPage",
+    component: OrderPage,
   },
   
  
